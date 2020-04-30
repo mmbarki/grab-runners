@@ -3,16 +3,21 @@ import glob
 import subprocess
 import datetime
 
-# now = datetime.datetime.now()
-# now_str = now.strftime("%d%m%Y_%H:%M")
-# print(now)
-# print(now_str)
+# Windows ------------------------------------------------------------------
+#webgrabplus_exe = r'C:\Program Files (x86)\WebGrab+Plus\bin\WebGrab+Plus.exe'
+#webgrabplus_dir = r'C:\Users\Mbarki\AppData\Local\WebGrab+Plus'
+#xmltv_files_dir = r'F:\Developpement\SOURCES\xmltv\xmltv_files'
+#---------------------------------------------------------------------------
 
-webgrabplus_exe = r'C:\Program Files (x86)\WebGrab+Plus\bin\WebGrab+Plus.exe'
-webgrabplus_dir = r'C:\Users\Mbarki\AppData\Local\WebGrab+Plus'
+# Unix ------------------------------------------------------------------
+#unix = true
+#webgrabplus_sh = r'/home/jeedom/webGrab/.wg++/run.sh'
+#webgrabplus_dir = r'/home/jeedom/webGrab/.wg++'
+#xmltv_files_dir = r'/home/jeedom/webGrab/xmltv_files'
+#---------------------------------------------------------------------------
+
 out_dir = webgrabplus_dir + r'\out'
 archives_dir = out_dir + r'\archives'
-xmltv_files_dir = r'F:\Developpement\SOURCES\xmltv\xmltv_files'
 
 print("XMLTV   ....................................................................................... Begin")
 
@@ -33,7 +38,11 @@ else:
 
 # call webgrab++:
 print("........................................................................................ step 2: Grabing")
-sortie = subprocess.call(webgrabplus_exe + ' "' + webgrabplus_dir + '"')
+if unix == true:
+	sortie = subprocess.call('[./' + webgrabplus_sh + '] "' + webgrabplus_dir + '"')
+else:
+	sortie = subprocess.call(webgrabplus_exe + ' "' + webgrabplus_dir + '"')
+
 exist = glob.glob(out_dir + r'\guide*.xmltv')
 
 #exit()
