@@ -35,18 +35,18 @@ print 'Os: "' + os_ + '"'
 
 
 if os_ == 'Windows':
-	grabber_dir = r'F:/Developpement/SOURCES/racacax/XML-TV-Fr'	
+	grabber_dir = r'F:/Developpement/SOURCES/racacax_fork/XML-TV-Fr'
 	grabber_run_cmd = r'php ' + grabber_dir + r'/script_all.php'
 
 	xmltv_files_dir = r'F:/Developpement/SOURCES/xmltv/xmltv_files'
-	python_runner_dir = r'F:/Developpement/SOURCES/xmltv/xmltv_python'
+	runner_dir = r'F:/Developpement/SOURCES/xmltv/grab-runners'
 
 elif os_ == 'Linux':
-	grabber_dir = r'/develops/grabbers/racacax/XML-TV-Fr'
+	grabber_dir = r'/develops/grabbers/racacax_fork/XML-TV-Fr'
 	grabber_run_cmd = r'php ' + grabber_dir + r'/script_all.php'
 
 	xmltv_files_dir = r'/develops/grabbers/xmltv_files'
-	python_runner_dir = r'/develops/grabbers/xmltv_python'
+	runner_dir = r'/develops/grabbers/grab-runners'
 
 else:
 	print 'unknown Os. "' + os_ + '", program is stopped'
@@ -59,7 +59,7 @@ archives_dir = out_dir + r'/archives'
 print('grabber_dir : ' + grabber_dir)
 print('grabber_run_cmd : ' + grabber_run_cmd)
 print('xmltv_files_dir : ' + xmltv_files_dir)
-print('python_runner_dir : ' + python_runner_dir)
+print('runner_dir : ' + runner_dir)
 print('out_dir : ' + out_dir)
 print('archives_dir : ' + archives_dir)
 
@@ -87,7 +87,7 @@ os.chdir(grabber_dir)
 os.system('mv channels.json channels.old.json')
 print('done.')
 
-os.chdir(python_runner_dir)
+os.chdir(runner_dir)
 
 print(r'copying "channels.json" file to Grabber directory ...')
 os.system(r'cp config_racacax_files/channels.json ' + grabber_dir)

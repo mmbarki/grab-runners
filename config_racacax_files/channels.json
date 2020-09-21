@@ -69,7 +69,7 @@
   "NatGeoWild.fr": {},
   "NationalGeographic.fr": {},
   "NRJ12.fr": {},
-  "NT1.fr": {},
+  "NT1.fr": {"name":"tfx"},
   "Numero23.fr": {},
   "OCSChoc.fr": {},
   "OCSCity.fr": {},
@@ -107,5 +107,14 @@
   "Viceland.fr": {},
   "Voyage.fr": {},
   "W9.fr": {},
-  "UltraNature": {"priority":["UltraNature"]}
+  "UltraNature": {"priority":["UltraNature"]},
+  "Telefoot": {},
+  "TelefootStadium1": {},
+  "TelefootStadium2": {},
+  "TelefootStadium3": {},
+  "TelefootStadium4": {},
+  "TelefootStadium5": {},
+  "TelefootStadium6": {},
+  "TelefootStadium7": {},
+  "TelefootStadium8": {}
 }
