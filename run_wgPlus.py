@@ -23,7 +23,7 @@ print 'Os: "' + os_ + '"'
 
 #*	xmltv_files_dir = r'c:/path/to/your/xmltv_files/destination'
 #*	runner_dir = r'c:/path/to/this/grab-runner/script'
-	
+
 #elif os_ == 'Linux':
 #*	webgrabplus_runner = r'/path/to/your/wgPlus/install/directory'
 #*	webgrabplus_dir = r'/path/to/your/wgPlus/working/directory'
@@ -43,7 +43,7 @@ if os_ == 'Windows':
 
 	xmltv_files_dir = r'F:/Developpement/SOURCES/xmltv/xmltv_files'
 	runner_dir = r'F:/Developpement/SOURCES/xmltv/grab-runners'
-	
+
 elif os_ == 'Linux':
 	webgrabplus_runner = r'/run.sh'
 	webgrabplus_dir = r'/develops/grabbers/wgPlus/.wg++'
@@ -56,7 +56,7 @@ else:
 
 print(".............................................................................. step 0: checking ...")
 
-if (webgrabplus_runner == '' || webgrabplus_dir == '' || xmltv_files_dir == '' || runner_dir == ''):
+if webgrabplus_runner == '' or webgrabplus_dir == '' or xmltv_files_dir == '' or runner_dir == '':
 	print 'config not found, please edit this script and update the config block, the program is stopped'
 	exit()
 

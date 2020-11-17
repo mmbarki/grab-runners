@@ -13,7 +13,7 @@
   
   
   <!--<decryptkey site="site-name">decrypt_userkey</decryptkey>-->
-  <!--<license wg-username="your webgrab+plus username" registered-email="your registered email address" password="optional-password" />-->
+  <license wg-username="mbk_med" registered-email="mbarki.med01@gmail.com" password="0f927fff"/>
   <logging>on</logging>
   <retry channel-delay="1" index-delay="1" show-delay="1" time-out="10">4</retry>
   <timespan>3</timespan>
