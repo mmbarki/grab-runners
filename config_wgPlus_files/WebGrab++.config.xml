@@ -49,10 +49,10 @@
     <channel update="f" site="elcinema.ar.com" site_id="1312" xmltv_id="Aloula">Aloula</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1136" xmltv_id="Abu Dhabi 1">Abu Dhabi 1</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1198" xmltv_id="CBC">CBC</channel>
-	<channel update="i" site="elcinema.ar.com" site_id="1223" xmltv_id="النهار دراما">النهار دراما</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1193" xmltv_id="دراما">دراما</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1137" xmltv_id="الحياة">الحياة</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1138" xmltv_id="الحياة دراما">الحياة دراما</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1223" xmltv_id="النهار راما<"النهار دراما</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1193" xmltv_id="النهار<"النهار</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1137" xmltv_id="الحياة<"الحياة</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1138" xmltv_id="الحياة دراما<"الحياة دراما</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1241" xmltv_id="MBC 3">MBC 3</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1354" xmltv_id="MBC 5">MBC 5</channel>
     <channel update="f" site="elcinema.ar.com" site_id="1353" xmltv_id="2M">2M</channel>
@@ -63,10 +63,10 @@
     <channel update="i" site="elcinema.ar.com" site_id="1203" xmltv_id="ON E">ON E</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1278" xmltv_id="mbc masr 2">mbc masr 2</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1161" xmltv_id="alfa مسلسلات">alfa مسلسلات</channel>
-	<channel update="i" site="elcinema.ar.com" site_id="1186" xmltv_id="alfa مسلسلات 2">alfa مسلسلات 2</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1186" xmltv_id="alfa مسلسلات 2">alfa مسلسلات 2</channel>
     <channel update="f" site="elcinema.ar.com" site_id="1162" xmltv_id="alfa اليوم">alfa اليوم</channel>
-	<channel update="i" site="elcinema.ar.com" site_id="1250" xmltv_id="OSN ياهلا الأولى">OSN ياهلا الأولى</channel>
-	<channel update="i" site="elcinema.ar.com" site_id="1205" xmltv_id="OSN ياهلا">OSN ياهلا</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1250" xmltv_id="OSN ياهلا الأولى">OSN ياهلا الأولى</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1205" xmltv_id="OSN ياهلا">OSN ياهلا</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1266" xmltv_id="NAt Geo Abudhabi">NAt Geo Abudhabi</channel>
 
 

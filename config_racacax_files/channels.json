@@ -44,7 +44,7 @@
   "Euronews.fr": {},
   "Eurosport1.fr": {},
   "Eurosport2.fr": {},
-  "France2.fr": {},
+  "France2.fr": {"priority":["Orange"]},
   "France24.fr": {},
   "France3.fr": {},
   "France4.fr": {},
@@ -107,14 +107,5 @@
   "Viceland.fr": {},
   "Voyage.fr": {},
   "W9.fr": {},
-  "UltraNature": {"priority":["UltraNature"]},
-  "Telefoot": {},
-  "TelefootStadium1": {},
-  "TelefootStadium2": {},
-  "TelefootStadium3": {},
-  "TelefootStadium4": {},
-  "TelefootStadium5": {},
-  "TelefootStadium6": {},
-  "TelefootStadium7": {},
-  "TelefootStadium8": {}
+  "UltraNature": {"priority":["UltraNature"]}
 }
