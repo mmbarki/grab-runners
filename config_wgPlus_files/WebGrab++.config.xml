@@ -15,8 +15,9 @@
   <!--<decryptkey site="site-name">decrypt_userkey</decryptkey>-->
   <license wg-username="mbk_med" registered-email="mbarki.med01@gmail.com" password="0f927fff"/>
   <logging>on</logging>
-  <retry channel-delay="1" index-delay="1" show-delay="1" time-out="10">4</retry>
-  <timespan>3</timespan>
+   <!--<retry channel-delay="1" index-delay="1" show-delay="1" time-out="10">2</retry> -->
+  <retry channel-delay="3" index-delay="3" show-delay="3" time-out="10">1</retry>
+  <timespan>4</timespan>
   <update>f</update>
    
   <!--
@@ -33,13 +34,13 @@
     <!-- arabe -->
     <channel update="i" site="elcinema.ar.com" site_id="1128" xmltv_id="MBC 2">MBC 2</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1163" xmltv_id="Panorama Film">Panorama Film</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1207" xmltv_id="Aflam TV 7 Maroc">Aflam TV 7 Maroc</channel>
+ <!--    <channel update="i" site="elcinema.ar.com" site_id="1207" xmltv_id="Aflam TV 7 Maroc">Aflam TV 7 Maroc</channel> -->
     <channel update="i" site="elcinema.ar.com" site_id="1129" xmltv_id="MBC 4">MBC 4</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1199" xmltv_id="CBC Drama">CBC Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1194" xmltv_id="MBC Drama">MBC Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1131" xmltv_id="MBC Drama +">MBC Drama +</channel>    
     <channel update="i" site="elcinema.ar.com" site_id="1156" xmltv_id="Nile Drama">Nile Drama</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1170" xmltv_id="Alrai TV">Alrai TV</channel>
+ <!--    <channel update="i" site="elcinema.ar.com" site_id="1170" xmltv_id="Alrai TV">Alrai TV</channel> -->
     <channel update="i" site="elcinema.ar.com" site_id="1178" xmltv_id="Abu Dhabi Drama">Abu Dhabi Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1164" xmltv_id="Panorama Drama">Panorama Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1165" xmltv_id="Panorama Drama 2">Panorama Drama 2</channel>
