@@ -17,7 +17,7 @@
   <logging>on</logging>
    <!--<retry channel-delay="1" index-delay="1" show-delay="1" time-out="10">2</retry> -->
   <retry channel-delay="3" index-delay="3" show-delay="3" time-out="10">1</retry>
-  <timespan>4</timespan>
+  <timespan>6</timespan>
   <update>f</update>
    
   <!--
@@ -69,7 +69,7 @@
     <channel update="i" site="elcinema.ar.com" site_id="1193" xmltv_id="النهار">النهار</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1137" xmltv_id="الحياة">الحياة</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1138" xmltv_id="الحياة دراما">الحياة دراما</channel>
-
+    <channel update="i" site="elcinema.ar.com" site_id="1285" xmltv_id="OSN Cinema ياهلا">OSN Cinema ياهلا</channel>
 
 	
     <!-- bein sport mena -->
@@ -79,14 +79,6 @@
     <channel update="i" site="bein.net" site_id="mena_sports/HD4" xmltv_id="HD4">Bein sports 4 Ar</channel>
     <channel update="i" site="bein.net" site_id="mena_sports/HD5" xmltv_id="HD5">Bein sports 5 Ar</channel>
     <channel update="i" site="bein.net" site_id="mena_sports/HD6" xmltv_id="HD6">Bein sports 6 Ar</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/HD7" xmltv_id="HD7">Bein sports 7 Ar</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/HD8" xmltv_id="HD8">Bein sports 8 Ar</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/HD9" xmltv_id="HD9">Bein sports 9 Ar</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/SportsHD11" xmltv_id="SportsHD11">Bein sports 11 english</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/SportsHD12" xmltv_id="SportsHD12">Bein sports 12 english</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/SportsHD13" xmltv_id="SportsHD13">Bein sports 13 english</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/SportsHD14" xmltv_id="SportsHD14">Bein sports 14 french</channel>
-    <channel update="i" site="bein.net" site_id="mena_sports/4K" xmltv_id="4K">Bein 4K</channel>
 	
     <!-- bein sport france -->
     <!-- <channel update="i" site="bein.net" site_id="france_sports/HD1" xmltv_id="HD1">HD1</channel> -->
