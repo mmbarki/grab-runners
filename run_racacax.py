@@ -43,7 +43,8 @@ if os_ == 'Windows':
 
 elif os_ == 'Linux':
 	grabber_dir = r'/develops/grabbers/racacax_fork/XML-TV-Fr'
-	grabber_run_cmd = r'php ' + grabber_dir + r'/script_all.php'
+	grabber_conf_dir = grabber_dir + r'/config'
+	grabber_run_cmd = r'php ' + grabber_dir + r'/example/script_all.php'
 
 	xmltv_files_dir = r'/develops/grabbers/xmltv_files'
 	runner_dir = r'/develops/grabbers/grab-runners'
@@ -53,8 +54,8 @@ else:
 	exit()
 
 
-out_dir = grabber_dir + r'/xmltv'
-archives_dir = out_dir + r'/archives'
+out_dir = grabber_dir + r'/var/export'
+archives_dir = out_dir + r'/var/export/archives'
 
 print('grabber_dir : ' + grabber_dir)
 print('grabber_run_cmd : ' + grabber_run_cmd)
@@ -82,15 +83,19 @@ print('resync with Git repository done')
 
 print(".........................................................................................step 2: init")
 
-print(r'saving "channels.json" as "channels.old.json" on Grabber directory ...')
-os.chdir(grabber_dir)
+print(r'saving "channels.json" as "channels.old.json" on Grabber config directory ...')
+os.chdir(grabber_conf_dir)
 os.system('mv channels.json channels.old.json')
 print('done.')
 
 os.chdir(runner_dir)
 
-print(r'copying "channels.json" file to Grabber directory ...')
-os.system(r'cp config_racacax_files/channels.json ' + grabber_dir)
+print(r'copying "channels.json" file to Grabber config directory ...')
+os.system(r'cp config_racacax_files/channels.json ' + grabber_conf_dir)
+print('done.')
+
+print(r'copying "config.json" file to Grabber config directory ...')
+os.system(r'cp config_racacax_files/config.json ' + grabber_conf_dir)
 print('done.')
 
 
