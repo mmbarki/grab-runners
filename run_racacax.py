@@ -56,6 +56,7 @@ else:
 
 out_dir = grabber_dir + r'/var/export'
 archives_dir = out_dir + r'/var/export/archives'
+xmltv_files_logs_dir = xmltv_files_dir + r'/logs'
 
 print('grabber_dir : ' + grabber_dir)
 print('grabber_run_cmd : ' + grabber_run_cmd)
@@ -131,8 +132,7 @@ exist = glob.glob(out_dir + r'/xmltv.xml')
 
 # test grabing result:
 if sortie == 0 and exist:
-    print(
-        "Grabing done ................................................................................... [OK]")
+    print("Grabing done ................................................................................... [OK]")
 
     # copy xmltv.xml file:
     now = datetime.datetime.now()
@@ -147,6 +147,10 @@ if sortie == 0 and exist:
     # copy file to xmltv_files
     os.system('cp ' + file_name + ' ' + xmltv_files_dir + '/files')
     os.system('cp ' + file_name + ' ' + xmltv_files_dir + '/guide_FR.xmltv')
+
+    os.system('cp '+ runner_dir + r'/cron_racacax.log ' + xmltv_files_logs_dir)
+    print('copying log files done.')
+
 
     #exit()
 
