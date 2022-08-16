@@ -3,7 +3,7 @@ import glob
 import subprocess
 import datetime
 import platform
-
+#from os.path import expanduser home = expanduser("~")
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ os_ = platform.system()
 
 print 'Os: "' + os_ + '"'
 
-
+#~/dev/epg/grab-runners
 if os_ == 'Windows':
 	grabber_dir = r'F:/Developpement/SOURCES/racacax_fork/XML-TV-Fr'
 	grabber_run_cmd = r'php ' + grabber_dir + r'/script_all.php'
@@ -42,12 +42,13 @@ if os_ == 'Windows':
 	runner_dir = r'F:/Developpement/SOURCES/xmltv/grab-runners'
 
 elif os_ == 'Linux':
-	grabber_dir = r'/develops/grabbers/racacax_fork/XML-TV-Fr'
+	home = os.getenv("HOME")
+	grabber_dir = home + r'/dev/epg/grabbers/XML-TV-Fr'
 	grabber_conf_dir = grabber_dir + r'/config'
 	grabber_run_cmd = r'php ' + grabber_dir + r'/example/script_all.php'
 
-	xmltv_files_dir = r'/develops/grabbers/xmltv_files'
-	runner_dir = r'/develops/grabbers/grab-runners'
+	xmltv_files_dir = home + r'/dev/epg/xmltv_files'
+	runner_dir = home + r'/dev/epg/grab-runners'
 
 else:
 	print 'unknown Os. "' + os_ + '", program is stopped'
@@ -55,7 +56,7 @@ else:
 
 
 out_dir = grabber_dir + r'/var/export'
-archives_dir = out_dir + r'/var/export/archives'
+archives_dir = out_dir + r'/archives'
 xmltv_files_logs_dir = xmltv_files_dir + r'/logs'
 
 print('grabber_dir : ' + grabber_dir)
