@@ -46,7 +46,7 @@
     <!-- *** elcinema.com *** -->
     
     <!-- Maroc -->
-    <channel update="i" site="elcinema.ar.com" site_id="1207" xmltv_id="Aflam TV 7 Maroc">Aflam TV 7 Maroc</channel>
+    <!-- <channel update="i" site="elcinema.ar.com" site_id="1207" xmltv_id="Aflam TV 7 Maroc">Aflam TV 7 Maroc</channel> -->
     <channel update="i" site="elcinema.ar.com" site_id="1312" xmltv_id="Aloula">Aloula</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1353" xmltv_id="2M">2M</channel>
 
@@ -80,8 +80,8 @@
 
 
     <!-- Misc -->
-    <!-- <channel update="i" site="elcinema.ar.com" site_id="1382" xmltv_id="Alaraby TV 2">Alaraby TV 2</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1136" xmltv_id="Abu Dhabi 1">Abu Dhabi 1</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1382" xmltv_id="Alaraby TV 2">Alaraby TV 2</channel>
+    <!-- <channel update="i" site="elcinema.ar.com" site_id="1136" xmltv_id="Abu Dhabi 1">Abu Dhabi 1</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1178" xmltv_id="Abu Dhabi Drama">Abu Dhabi Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1309" xmltv_id="Bein drama">Bein drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1299" xmltv_id="Roya رؤيا">Roya رؤيا</channel> -->

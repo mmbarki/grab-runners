@@ -89,16 +89,26 @@ print(".........................................................................
 print(r'saving "WebGrab++.config.xml" as "WebGrab++_old.config.xml" on WebGrab++ directory ...')
 os.chdir(webgrabplus_dir)
 os.system('mv WebGrab++.config.xml WebGrab++.config_old.xml')
+print('')
 print('done.')
 
 os.chdir(runner_dir)
 
+print(r'(force) update runners and configs from Git repository ...')
+os.system('git checkout master')
+os.system('git fetch')
+os.system('git reset --hard origin/master')
+print('')
+print('done.')
+
 print(r'copying "WebGrab++.config.xml" file to WebGrab++ directory ...')
 os.system(r'cp config_wgPlus_files/WebGrab++.config.xml ' + webgrabplus_dir)
+print('')
 print('done.')
 
 print(r'copying sites.ini files to WebGrab++ directory ...')
 os.system(r'cp config_wgPlus_files/*.ini ' + webgrabplus_dir)
+print('')
 print('done.')
 
 exist = glob.glob(out_dir + r'/guide*.xmltv')
@@ -110,6 +120,7 @@ if exist:
 
     os.chdir(out_dir)
     os.system('mv guide_*.xmltv ' + archives_dir)
+    print('')
     print('done.')
 else:
     print('everything is alright, nothing to do')
@@ -145,6 +156,7 @@ if sortie == 0 and exist:
     os.system('cp guide.xmltv ' + file_name)
 
     print('guide.xmltv copied to "' + file_name)
+    print('')
 
     # copy file to xmltv_files
     os.system('cp ' + file_name + ' ' + xmltv_files_dir + '/files')
@@ -164,6 +176,7 @@ if sortie == 0 and exist:
     os.system('git push origin master')
 
     print('file "' + file_name + '" pushed to Git repository')
+    print('')
 
 else:
     print("Grabbing error ....................................... [KO]")

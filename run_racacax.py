@@ -88,9 +88,17 @@ print(".........................................................................
 print(r'saving "channels.json" as "channels.old.json" on Grabber config directory ...')
 os.chdir(grabber_conf_dir)
 os.system('mv channels.json channels.old.json')
+print('')
 print('done.')
 
 os.chdir(runner_dir)
+
+print(r'(force) update runners and configs from Git repository ...')
+os.system('git checkout master')
+os.system('git fetch')
+os.system('git reset --hard origin/master')
+print('')
+print('done.')
 
 print(r'copying "channels.json" file to Grabber config directory ...')
 os.system(r'cp config_racacax_files/channels.json ' + grabber_conf_dir)
@@ -98,6 +106,7 @@ print('done.')
 
 print(r'copying "config.json" file to Grabber config directory ...')
 os.system(r'cp config_racacax_files/config.json ' + grabber_conf_dir)
+print('')
 print('done.')
 
 
@@ -110,9 +119,11 @@ if exist:
 
     os.chdir(out_dir)
     os.system('mv guide_*.xmltv ' + archives_dir)
+    print('')
     print('done.')
 else:
     print('everything is alright, nothing to do')
+    print('')
 
 #exit()
 
@@ -121,11 +132,18 @@ print(".........................................................................
 
 os.chdir(grabber_dir)
 
+print(r'update xmltv grabber from racacax Git repository ...')
+os.system('git checkout master')
+os.system('git fetch')
+os.system('git rebase origin/master')
+print('')
+print('done.')
+
 if os_ == 'Windows':
 	sortie = subprocess.call(grabber_run_cmd)
 if os_ == 'Linux':
 	#sortie = subprocess.call(['.' + webgrabplus_runner, webgrabplus_dir])
-    	sortie = subprocess.call(grabber_run_cmd, shell=True)
+    sortie = subprocess.call(grabber_run_cmd, shell=True)
 
 exist = glob.glob(out_dir + r'/xmltv.xml')
 
@@ -144,6 +162,7 @@ if sortie == 0 and exist:
     os.system('cp xmltv.xml ' + file_name)
 
     print('xmltv.xml copied to "' + file_name)
+    print('')
 
     # copy file to xmltv_files
     os.system('cp ' + file_name + ' ' + xmltv_files_dir + '/files')
@@ -151,6 +170,7 @@ if sortie == 0 and exist:
 
     os.system('cp '+ runner_dir + r'/cron_racacax.log ' + xmltv_files_logs_dir)
     print('copying log files done.')
+    print('')
 
 
     #exit()
@@ -167,6 +187,7 @@ if sortie == 0 and exist:
     os.system('git push origin master')
 
     print('file "' + file_name + '" pushed to Git repository')
+    print('')
 
 else:
     print("Grabing error ....................................... [KO]")
