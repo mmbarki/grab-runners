@@ -14,11 +14,39 @@
   
   <!--<decryptkey site="site-name">decrypt_userkey</decryptkey>-->
   <license wg-username="mbk_med" registered-email="mbarki.med01@gmail.com" password="0f927fff"/>
+
+  <!-- pour forcer la mise a jour de la license ou le hardware_id -->
+  <!--<license wg-username="mbk_med" registered-email="mbarki.med01@gmail.com" password="0f927fff">h</license>-->
+
   <logging>on</logging>
-   <!--<retry channel-delay="1" index-delay="1" show-delay="1" time-out="10">2</retry> -->
-  <retry channel-delay="3" index-delay="3" show-delay="3" time-out="10">1</retry>
-  <timespan>6</timespan>
-  <update>f</update>
+ 
+  <!-- Augmenter les délais pour réduire la fréquence des requêtes -->
+  <!-- channel-delay :      Attente de 10 secondes avant de réessayer la récupération des données pour une chaîne spécifique. -->
+  <!-- index-delay :        Attente de 10 secondes avant de réessayer la récupération des données pour un index spécifique. -->
+  <!-- show-delay :         Attente de 10 secondes avant de réessayer la récupération des données pour un programme spécifique. -->
+  <!-- time-out :           Limite de temps de 20 secondes pour chaque tentative de récupération. -->
+  <!-- La balise <retry> :  indique le nombre de tentatives de récupération avant d'abandonner. Ici, défini sur "2" pour trois tentatives. -->
+  <retry channel-delay="10" index-delay="10" show-delay="10" time-out="20">1</retry>  
+  <!--<retry channel-delay="1" index-delay="1" show-delay="1" time-out="10">2</retry> -->
+
+
+  <!-- getting info for 6 (today + 5) days (0=today) -->
+  <timespan>5</timespan>
+
+  
+
+  <!-- c: channel list generation:  generate a new channel list -->
+  <!-- i: incremental:              only updates of changes, gabs, repairs, and new shows -->
+  <!-- l: light:                    forces update of today and new shows, rest as incremental -->
+  <!-- s: smart:                    forces update of today and tomorrow and new shows, rest as light -->
+  <!-- f: full:                     forces full update -->
+
+  <update>s</update>
+
+
+
+
+
    
   <!--
             Replace the next dummy channel entry with the channels you want.
@@ -32,21 +60,33 @@
 
 
     <!-- arabe -->
+
+    <channel update="i" site="elcinema.ar.com" site_id="1127" xmltv_id="MBC">MBC</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1128" xmltv_id="MBC 2">MBC 2</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1239" xmltv_id="MBC Egypt">MBC Egypt</channel>
+
     <channel update="i" site="elcinema.ar.com" site_id="1163" xmltv_id="Panorama Film">Panorama Film</channel>
+
+
  <!--    <channel update="i" site="elcinema.ar.com" site_id="1207" xmltv_id="Aflam TV 7 Maroc">Aflam TV 7 Maroc</channel> -->
+
+ <!--
     <channel update="i" site="elcinema.ar.com" site_id="1129" xmltv_id="MBC 4">MBC 4</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1199" xmltv_id="CBC Drama">CBC Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1194" xmltv_id="MBC Drama">MBC Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1131" xmltv_id="MBC Drama +">MBC Drama +</channel>    
     <channel update="i" site="elcinema.ar.com" site_id="1156" xmltv_id="Nile Drama">Nile Drama</channel>
+ -->
+
  <!--    <channel update="i" site="elcinema.ar.com" site_id="1170" xmltv_id="Alrai TV">Alrai TV</channel> -->
+
     <channel update="i" site="elcinema.ar.com" site_id="1178" xmltv_id="Abu Dhabi Drama">Abu Dhabi Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1164" xmltv_id="Panorama Drama">Panorama Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1165" xmltv_id="Panorama Drama 2">Panorama Drama 2</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1260" xmltv_id="CBC sofra">CBC sofra</channel>
-    <channel update="f" site="elcinema.ar.com" site_id="1127" xmltv_id="MBC">MBC</channel>
+    
     <channel update="i" site="elcinema.ar.com" site_id="1239" xmltv_id="MBC Egypt">MBC Egypt</channel>
+
     <channel update="f" site="elcinema.ar.com" site_id="1312" xmltv_id="Aloula">Aloula</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1136" xmltv_id="Abu Dhabi 1">Abu Dhabi 1</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1198" xmltv_id="CBC">CBC</channel>
@@ -70,7 +110,6 @@
     <channel update="i" site="elcinema.ar.com" site_id="1137" xmltv_id="الحياة">الحياة</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1138" xmltv_id="الحياة دراما">الحياة دراما</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1285" xmltv_id="OSN Cinema ياهلا">OSN Cinema ياهلا</channel>
-
 	
     <!-- bein sport mena -->
     <channel update="i" site="bein.net" site_id="mena_sports/HD1" xmltv_id="HD1">Bein sports 1 Ar</channel>
@@ -79,7 +118,7 @@
     <channel update="i" site="bein.net" site_id="mena_sports/HD4" xmltv_id="HD4">Bein sports 4 Ar</channel>
     <channel update="i" site="bein.net" site_id="mena_sports/HD5" xmltv_id="HD5">Bein sports 5 Ar</channel>
     <channel update="i" site="bein.net" site_id="mena_sports/HD6" xmltv_id="HD6">Bein sports 6 Ar</channel>
-	
+ 	
     <!-- bein sport france -->
     <!-- <channel update="i" site="bein.net" site_id="france_sports/HD1" xmltv_id="HD1">HD1</channel> -->
     <!-- <channel update="i" site="bein.net" site_id="france_sports/HD2" xmltv_id="HD2">HD2</channel> -->

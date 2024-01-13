@@ -45,11 +45,11 @@ if os_ == 'Windows':
 	runner_dir = r'F:/Developpement/SOURCES/xmltv/grab-runners'
 
 elif os_ == 'Linux':
-	webgrabplus_runner = r'/run.sh'
-	webgrabplus_dir = r'/develops/grabbers/wgPlus/.wg++'
+	webgrabplus_runner = r'/run.net.sh'
+	webgrabplus_dir = r'/home/mohammed/dev/epg/grabbers/wgPlus/.wg++'
 
-	xmltv_files_dir = r'/develops/grabbers/xmltv_files'
-	runner_dir = r'/develops/grabbers/grab-runners'
+	xmltv_files_dir = r'/home/mohammed/dev/epg/xmltv_files'
+	runner_dir = r'/home/mohammed/dev/epg/grab-runners'
 else:
 	print 'unknown Os. "' + os_ + '", program is stopped'
 	exit()

@@ -30,6 +30,7 @@
   "MyZenTV.fr":{},
   "NT1.fr": {"name":"tfx"},
   "CanalPlus.fr": {},
+  "CanalPlusBoxOffice.fr": {},
   "CanalPlusCinema.fr": {},
   "CanalPlusFamily.fr": {},
   "CanalPlusSeries.fr": {},
@@ -115,5 +116,16 @@
   "CanalPlusSport2.af": {"name": "canal Plus Sport2 afrique"},
   "CanalPlusSport3.af": {"name": "canal Plus Sport3 afrique"},
   "CanalPlusSport4.af": {"name": "canal Plus Sport4 afrique"},
-  "CanalPlusSport5.af": {"name": "canal Plus Sport5 afrique"}
+  "CanalPlusSport5.af": {"name": "canal Plus Sport5 afrique"},
+  "AmazonPrimeMultiplex.fr": "multiplex",
+  "AmazonPrimeFusion.fr": "merged",
+  "AmazonPrime1.fr": {},
+  "AmazonPrime2.fr": {},
+  "AmazonPrime3.fr": {},
+  "AmazonPrime4.fr": {},
+  "AmazonPrime5.fr": {},
+  "AmazonPrime6.fr": {},
+  "AmazonPrime7.fr": {},
+  "AmazonPrime8.fr": {},
+  "AmazonPrime9.fr": {}
 }
