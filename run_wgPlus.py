@@ -89,8 +89,8 @@ print(".........................................................................
 print(r'saving "WebGrab++.config.xml" as "WebGrab++_old.config.xml" on WebGrab++ directory ...')
 os.chdir(webgrabplus_dir)
 os.system('mv WebGrab++.config.xml WebGrab++.config_old.xml')
-print('')
 print('done.')
+print('')
 
 os.chdir(runner_dir)
 
@@ -98,18 +98,18 @@ print(r'(force) update runners and configs from Git repository ...')
 os.system('git checkout master')
 os.system('git fetch')
 os.system('git reset --hard origin/master')
-print('')
 print('done.')
+print('')
 
 print(r'copying "WebGrab++.config.xml" file to WebGrab++ directory ...')
 os.system(r'cp config_wgPlus_files/WebGrab++.config.xml ' + webgrabplus_dir)
-print('')
 print('done.')
+print('')
 
 print(r'copying sites.ini files to WebGrab++ directory ...')
 os.system(r'cp config_wgPlus_files/*.ini ' + webgrabplus_dir)
-print('')
 print('done.')
+print('')
 
 exist = glob.glob(out_dir + r'/guide*.xmltv')
 if exist:
@@ -120,10 +120,11 @@ if exist:
 
     os.chdir(out_dir)
     os.system('mv guide_*.xmltv ' + archives_dir)
-    print('')
     print('done.')
+    print('')
 else:
     print('everything is alright, nothing to do')
+    print('')
 
 #exit()
 
@@ -144,8 +145,8 @@ exist = glob.glob(out_dir + r'/guide.xmltv')
 
 # test grabbing result:
 if sortie == 0 and exist:
-    print(
-        "Grabbing done ................................................................................... [OK]")
+    print("Grabbing done ................................................................................... [OK]")
+    print('')
 
     # copy guide.xmltv file:
     now = datetime.datetime.now()
