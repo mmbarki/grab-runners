@@ -53,7 +53,7 @@
     <!-- Mbc -->
     <channel update="i" site="elcinema.ar.com" site_id="1127" xmltv_id="MBC">MBC</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1128" xmltv_id="MBC 2">MBC 2</channel>
-	  <channel update="i" site="elcinema.ar.com" site_id="1241" xmltv_id="MBC 3">MBC 3</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1241" xmltv_id="MBC 3">MBC 3</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1129" xmltv_id="MBC 4">MBC 4</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1354" xmltv_id="MBC 5">MBC 5</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1239" xmltv_id="MBC Egypt">MBC Egypt</channel>
@@ -74,9 +74,9 @@
     <channel update="i" site="elcinema.ar.com" site_id="1137" xmltv_id="Alhayat">Alhayat</channel>
 
     <!-- OSN -->
-    <channel update="i" site="elcinema.ar.com" site_id="1205" xmltv_id="OSN Ya Hala">Osn Ya Hala</channel>
+    <!-- <channel update="i" site="elcinema.ar.com" site_id="1205" xmltv_id="OSN Ya Hala">Osn Ya Hala</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1285" xmltv_id="OSN Ya Hala cinema">Osn Ya Hala cinema</channel> 
-    <channel update="i" site="elcinema.ar.com" site_id="1390" xmltv_id="OSN TV Yahala Bil Arabi">OSN TV Yahala Bil Arabi</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1390" xmltv_id="OSN TV Yahala Bil Arabi">OSN TV Yahala Bil Arabi</channel> -->
 
 
     <!-- Misc -->
