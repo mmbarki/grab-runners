@@ -1,24 +1,26 @@
 # -*- coding: utf-8 -*-
 import os
 import glob
+import re
 import subprocess
 import datetime
 import platform
 import ConfigParser  # Utilise ConfigParser au lieu de configparser dans Python 3
 
 # directories
-wg_dir          = ''
-wg_run_file     = ''
-xmltv_files_dir = ''
-runner_dir      = ''
-out_dir         = ''
-archives_dir    = ''
+wg_dir           = ''
+wg_run_file      = ''
+xmltv_files_dir  = ''
+runner_dir       = ''
+out_dir          = ''
+archives_dir     = ''
 
 # credentials
-wg_username     = ''
-wg_email        = ''
-wg_password     = ''
-grab_result     = 0
+wg_username      = ''
+wg_email         = ''
+wg_password      = ''
+skip_credentials = False
+grab_result      = 0
 
 print(".............................................................................. step 1: 'config.ini'")
 
@@ -47,6 +49,7 @@ if not config.has_section("credentials") or not config.has_section(os_) :
 wg_username = config.get("credentials", "wg_username")
 wg_email = config.get("credentials", "wg_email")
 wg_password = config.get("credentials", "wg_password")
+skip_credentials = config.get("credentials", "skip_credentials")
 
 # check credentials
 if wg_username == '' or wg_email == '' or wg_password == '':
@@ -96,6 +99,27 @@ os.chdir(wg_dir)
 os.system('mv WebGrab++.config.xml WebGrab++.config_old.xml')
 print('done.')
 print('')
+
+if not skip_credentials:
+    print(r'update credentials skiped')
+else:
+    print(r'update credentials on "WebGrab++.config.xml"')
+
+    # read file
+    with open('WebGrab++.config.xml', 'r') as file:
+      data = file.read()
+
+    # update credentials
+    data = re.sub(r'wg-username="[^"]+"', 'wg-username="{}"'.format(wg_username), data)
+    data = re.sub(r'password="[^"]+"', 'password="{}"'.format(wg_password), data)
+    data = re.sub(r'registered-email="[^"]+"', 'registered-email="{}"'.format(wg_email), data)
+
+    # write
+    with open('WebGrab++.config.xml', 'w') as file:
+      file.write(data)
+    print(data)
+
+exit()
 
 os.chdir(runner_dir)
 
