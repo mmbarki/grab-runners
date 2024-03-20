@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import glob
 import subprocess
@@ -24,7 +25,8 @@ print(".........................................................................
 os_ = platform.system().lower()
 print 'Os: "' + os_ + '"'
 
-config_dir = 'config_wgPlus_files'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_dir = '{}/config_wgPlus_files'.format(script_dir)
 config_file = '{}/config.conf'.format(config_dir)
 
 # check if 'config.ini' exists
