@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import glob
 import subprocess
@@ -7,18 +6,19 @@ import platform
 import ConfigParser  # Utilise ConfigParser au lieu de configparser dans Python 3
 
 # directories
-wg_dir          = ''
-wg_run_file     = ''
-xmltv_files_dir = ''
-runner_dir      = ''
-out_dir         = ''
-archives_dir    = ''
+wg_dir           = ''
+wg_run_file      = ''
+xmltv_files_dir  = ''
+runner_dir       = ''
+out_dir          = ''
+archives_dir     = ''
 
 # credentials
-wg_username     = ''
-wg_email        = ''
-wg_password     = ''
-grab_result     = 0
+wg_username      = ''
+wg_email         = ''
+wg_password      = ''
+skip_credentials = False
+grab_result      = 0
 
 print(".............................................................................. step 1: 'config.ini'")
 
@@ -31,7 +31,7 @@ config_file = '{}/config.conf'.format(config_dir)
 
 # check if 'config.ini' exists
 if not os.path.isfile(config_file):
-    print("Erreur : configuration file  '{}' not found.".format(config_file))
+    print("error : configuration file '{}' not found.".format(config_file))
     exit()
 
 # open 'config.ini' file
@@ -47,6 +47,7 @@ if not config.has_section("credentials") or not config.has_section(os_) :
 wg_username = config.get("credentials", "wg_username")
 wg_email = config.get("credentials", "wg_email")
 wg_password = config.get("credentials", "wg_password")
+skip_credentials = config.getboolean("credentials", "skip_credentials")
 
 # check credentials
 if wg_username == '' or wg_email == '' or wg_password == '':
@@ -107,8 +108,30 @@ if 1!=1:
     print('done.')
     print('')
 
+if skip_credentials:
+    print(r'update credentials skiped')
+else:
+    print(r'update credentials on "WebGrab++.config.xml"')
+
+    # read file
+    with open('config_wgPlus_files/WebGrab++.config.xml', 'r') as file:
+      data = file.read()
+
+    # update credentials
+    data = re.sub(r'wg-username="[^"]+"', 'wg-username="{}"'.format(wg_username), data)
+    data = re.sub(r'password="[^"]+"', 'password="{}"'.format(wg_password), data)
+    data = re.sub(r'registered-email="[^"]+"', 'registered-email="{}"'.format(wg_email), data)
+
+    # write
+    with open('cred-WebGrab++.config.xml', 'w') as file:
+      file.write(data)
+    #print(data)
+
+#exit()
+
 print(r'copying "WebGrab++.config.xml" file to WebGrab++ directory ...')
 os.system(r'cp config_wgPlus_files/WebGrab++.config.xml ' + wg_dir)
+os.system(r'rm cred-WebGrab++.config.xml')
 print('done.')
 print('')
 
@@ -144,7 +167,7 @@ if os_ == 'windows':
     sortie = subprocess.call(wg_run_file + ' "' + wg_dir + '"')
 elif os_ == 'linux':
     # sortie = subprocess.call(['.' + wg_run_file, wg_dir])
-    # sortie = subprocess.call(['. run.net.sh'])
+    # sortie = subprocess.call(['.', wg_run_file])
       sortie = subprocess.call(['./run.net.sh'])
 else:
     print("Unknown os '{}'".format(os_))

@@ -1,3 +1,4 @@
 /.vscode
 cron_racacax.log
 cron_wgPlus.log
+/config_wgPlus_files/config.conf
