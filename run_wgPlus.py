@@ -142,12 +142,13 @@ if os_ == 'windows':
     sortie = subprocess.call(wg_run_file + ' "' + wg_dir + '"')
 elif os_ == 'linux':
     # sortie = subprocess.call(['.' + wg_run_file, wg_dir])
-    sortie = subprocess.call(['. run.net.sh'])
+    # sortie = subprocess.call(['. run.net.sh'])
+      sortie = subprocess.call(['./run.net.sh'])
 else:
     print("Unknown os '{}'".format(os_))
     sortie = -1
 
-exit()
+#exit()
 
 # test grabbing result:
 if sortie == 0 and os.path.isfile(out_dir + r'/guide.xmltv'):
