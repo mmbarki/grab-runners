@@ -49,7 +49,7 @@ if not config.has_section("credentials") or not config.has_section(os_) :
 wg_username = config.get("credentials", "wg_username")
 wg_email = config.get("credentials", "wg_email")
 wg_password = config.get("credentials", "wg_password")
-skip_credentials = config.get("credentials", "skip_credentials")
+skip_credentials = config.getboolean("credentials", "skip_credentials")
 
 # check credentials
 if wg_username == '' or wg_email == '' or wg_password == '':
@@ -110,7 +110,7 @@ if 1!=1:
     print('done.')
     print('')
 
-if not skip_credentials:
+if skip_credentials:
     print(r'update credentials skiped')
 else:
     print(r'update credentials on "WebGrab++.config.xml"')
@@ -127,12 +127,13 @@ else:
     # write
     with open('cred-WebGrab++.config.xml', 'w') as file:
       file.write(data)
-    print(data)
+    #print(data)
 
-exit()
+#exit()
 
 print(r'copying "WebGrab++.config.xml" file to WebGrab++ directory ...')
 os.system(r'cp config_wgPlus_files/WebGrab++.config.xml ' + wg_dir)
+os.system(r'rm cred-WebGrab++.config.xml ')
 print('done.')
 print('')
 
