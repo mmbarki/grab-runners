@@ -27,8 +27,8 @@
   <!-- time-out :           Limite de temps de 20 secondes pour chaque tentative de récupération. -->
   <!-- La balise <retry> :  indique le nombre de tentatives de récupération avant d'abandonner. Ici, défini sur "2" pour trois tentatives. -->
 
-  <retry channel-delay="3" index-delay="3" show-delay="3" time-out="20">1</retry>  
-  <!-- <retry channel-delay="10" index-delay="10" show-delay="10" time-out="20">1</retry>   -->
+  <!-- <retry channel-delay="3" index-delay="3" show-delay="3" time-out="20">1</retry>   -->
+  <retry channel-delay="10" index-delay="10" show-delay="10" time-out="20">1</retry>  
 
 
   <!-- getting info for 6 (today + 5) days (0=today) -->
@@ -47,12 +47,12 @@
     <!-- *** elcinema.com *** -->
     
     <!-- Maroc -->
-    <!-- <channel update="i" site="elcinema.ar.com" site_id="1207" xmltv_id="Aflam TV 7 Maroc">Aflam TV 7 Maroc</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1207" xmltv_id="Aflam TV 7 Maroc">Aflam TV 7 Maroc</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1312" xmltv_id="Aloula">Aloula</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1353" xmltv_id="2M">2M</channel> -->
+    <channel update="i" site="elcinema.ar.com" site_id="1353" xmltv_id="2M">2M</channel>
 
     <!-- Mbc -->
-    <!-- <channel update="i" site="elcinema.ar.com" site_id="1127" xmltv_id="MBC">MBC</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1127" xmltv_id="MBC">MBC</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1128" xmltv_id="MBC 2">MBC 2</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1241" xmltv_id="MBC 3">MBC 3</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1129" xmltv_id="MBC 4">MBC 4</channel>
@@ -60,10 +60,10 @@
     <channel update="i" site="elcinema.ar.com" site_id="1239" xmltv_id="MBC Egypt">MBC Egypt</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1278" xmltv_id="mbc Egypt 2">MBC Egypt 2</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1194" xmltv_id="MBC Drama">MBC Drama</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1131" xmltv_id="MBC Drama +">MBC Drama +</channel>     -->
+    <channel update="i" site="elcinema.ar.com" site_id="1131" xmltv_id="MBC Drama +">MBC Drama +</channel>    
 
     <!-- Egypt -->
-    <!-- <channel update="i" site="elcinema.ar.com" site_id="1156" xmltv_id="Nile Drama">Nile Drama</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1156" xmltv_id="Nile Drama">Nile Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1198" xmltv_id="CBC">CBC</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1199" xmltv_id="CBC Drama">CBC Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1134" xmltv_id="ON drama">ON drama</channel>
@@ -72,40 +72,38 @@
     <channel update="i" site="elcinema.ar.com" site_id="1203" xmltv_id="ON E">ON E</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1223" xmltv_id="Al Nahar Drama">Al Nahar Drama</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1193" xmltv_id="Al Nahar ">Al Nahar</channel>
-    <channel update="i" site="elcinema.ar.com" site_id="1137" xmltv_id="Alhayat">Alhayat</channel> -->
+    <channel update="i" site="elcinema.ar.com" site_id="1137" xmltv_id="Alhayat">Alhayat</channel>
 
     <!-- OSN -->
-    <!-- <channel update="i" site="elcinema.ar.com" site_id="1205" xmltv_id="OSN Ya Hala">Osn Ya Hala</channel>
+    <channel update="i" site="elcinema.ar.com" site_id="1205" xmltv_id="OSN Ya Hala">Osn Ya Hala</channel>
     <channel update="i" site="elcinema.ar.com" site_id="1285" xmltv_id="OSN Ya Hala cinema">Osn Ya Hala cinema</channel> 
-    <channel update="i" site="elcinema.ar.com" site_id="1390" xmltv_id="OSN TV Yahala Bil Arabi">OSN TV Yahala Bil Arabi</channel> -->
+    <channel update="i" site="elcinema.ar.com" site_id="1390" xmltv_id="OSN TV Yahala Bil Arabi">OSN TV Yahala Bil Arabi</channel>
 
 
     <!-- Misc -->
-    <!-- <channel update="i" site="elcinema.ar.com" site_id="1382" xmltv_id="Alaraby TV 2">Alaraby TV 2</channel> -->
+    <channel update="i" site="elcinema.ar.com" site_id="1382" xmltv_id="Alaraby TV 2">Alaraby TV 2</channel>
 
     <!-- *** osn.com *** -->
 
     <!-- OSN -->
-    <!-- <channel update="i" site="osn.com_ar" site_id="OYH" xmltv_id="OSN TV Yahala">OSN TV Yahala</channel>
+    <channel update="i" site="osn.com_ar" site_id="OYH" xmltv_id="OSN TV Yahala">OSN TV Yahala</channel>
     <channel update="i" site="osn.com_ar" site_id="OYA" xmltv_id="OSN TV Yahala Bil Arabi">OSN TV Yahala Bil Arabi</channel>
     <channel update="i" site="osn.com_ar" site_id="OYC" xmltv_id="OSN TV Yahala Aflam">OSN TV Yahala Aflam</channel>
     <channel update="i" site="osn.com_ar" site_id="SER" xmltv_id="Alfa Series Channel">Alfa Series Channel</channel>
-    <channel update="i" site="osn.com_ar" site_id="SE2" xmltv_id="Alfa Series +2">Alfa Series +2</channel> -->
+    <channel update="i" site="osn.com_ar" site_id="SE2" xmltv_id="Alfa Series +2">Alfa Series +2</channel>
 
 
     <!-- *** beinsports.com *** -->
 
     <!-- bein - mena  -->
     <channel update="i" site="beinsports.com.mena_ar" site_id="67DD49E9-E3A2-4B3A-94B8-88C620A4DFB1" xmltv_id="beIN 4K">beIN 4K Ar</channel>
-    <!-- <channel update="i" site="beinsports.com.mena_ar" site_id="84F7E0C1-D47A-4444-BBA8-C50BB8D2C5A8" xmltv_id="beIN SPORTS">beIN SPORTS Ar</channel>
-    <channel update="i" site="beinsports.com.mena_ar" site_id="7B558284-F996-4123-9584-1E5D01844270" xmltv_id="beIN SPORTS NEWS">beIN SPORTS NEWS Ar</channel> -->
-
+    <channel update="i" site="beinsports.com.mena_ar" site_id="84F7E0C1-D47A-4444-BBA8-C50BB8D2C5A8" xmltv_id="beIN SPORTS">beIN SPORTS Ar</channel>
+    <channel update="i" site="beinsports.com.mena_ar" site_id="7B558284-F996-4123-9584-1E5D01844270" xmltv_id="beIN SPORTS NEWS">beIN SPORTS NEWS Ar</channel>
     <!-- <channel update="i" site="beinsports.com.mena_ar" site_id="10A2A142-F98C-4706-9FD0-2D3C36045D63" xmltv_id="beIN SPORTS AFC">beIN SPORTS AFC Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="0CB3E227-4376-4545-AB64-D6C390F644D8" xmltv_id="beIN SPORTS AFC 1">beIN SPORTS AFC 1 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="EEB3E4E8-0F9D-4735-943C-AEA3E39C87DE" xmltv_id="beIN SPORTS AFC 2">beIN SPORTS AFC 2 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="A2D36A21-00D5-4001-A443-81CF2C06553F" xmltv_id="beIN SPORTS AFC 3">beIN SPORTS AFC 3 Ar</channel> -->
-
-    <!-- <channel update="i" site="beinsports.com.mena_ar" site_id="93000494-0DF8-4107-AF0E-1C99D3DBB2EC" xmltv_id="beIN SPORTS 1 FR">beIN SPORTS 1 FR Ar</channel>
+    <channel update="i" site="beinsports.com.mena_ar" site_id="93000494-0DF8-4107-AF0E-1C99D3DBB2EC" xmltv_id="beIN SPORTS 1 FR">beIN SPORTS 1 FR Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="9B969275-E59C-4DD1-8FCA-8B01EAE04909" xmltv_id="beIN SPORTS 2 FR">beIN SPORTS 2 FR Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="8C1EC4FC-35E6-4866-A75D-37FCFAE18839" xmltv_id="beIN SPORTS 1 EN">beIN SPORTS 1 EN Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="846C79D6-18F8-4A4D-ACFA-2C18DCCB6398" xmltv_id="beIN SPORTS 2 EN">beIN SPORTS 2 EN Ar</channel>
@@ -114,13 +112,11 @@
     <channel update="i" site="beinsports.com.mena_ar" site_id="7783DC02-4527-4094-9EE3-CDA8E093E4EB" xmltv_id="beIN SPORTS MAX 3">beIN SPORTS MAX 3 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="5B15611A-5F9D-4EF0-89A6-677C9CA2BD5D" xmltv_id="beIN SPORTS MAX 4">beIN SPORTS MAX 4 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="F7215920-CCF9-4DBB-8B9D-152E232FA549" xmltv_id="beIN SPORTS MAX 5">beIN SPORTS MAX 5 Ar</channel>
-    <channel update="i" site="beinsports.com.mena_ar" site_id="DC04009D-7E18-4D1C-BA7F-7269B8F8D065" xmltv_id="beIN SPORTS MAX 6">beIN SPORTS MAX 6 Ar</channel> -->
-
+    <channel update="i" site="beinsports.com.mena_ar" site_id="DC04009D-7E18-4D1C-BA7F-7269B8F8D065" xmltv_id="beIN SPORTS MAX 6">beIN SPORTS MAX 6 Ar</channel>
     <!-- <channel update="i" site="beinsports.com.mena_ar" site_id="E3B37FA0-E582-45B2-BB8E-516E1A714EF6" xmltv_id="beIN SPORTS XTRA 1">beIN SPORTS XTRA 1 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="27E67022-B943-4913-9AF3-AFD3DAC9854B" xmltv_id="beIN SPORTS XTRA 2">beIN SPORTS XTRA 2 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="CDF1A4C8-26DD-4C33-A239-F729A3B09295" xmltv_id="beIN SPORTS XTRA 3">beIN SPORTS XTRA 3 Ar</channel> -->
-
-    <!-- <channel update="i" site="beinsports.com.mena_ar" site_id="7836FEA9-6B39-4A1A-8352-DC5FCB97A16C" xmltv_id="beIN SPORTS 1">beIN SPORTS 1 Ar</channel>
+    <channel update="i" site="beinsports.com.mena_ar" site_id="7836FEA9-6B39-4A1A-8352-DC5FCB97A16C" xmltv_id="beIN SPORTS 1">beIN SPORTS 1 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="FD1DD7DD-1E7B-4AA2-8682-BFA17338E653" xmltv_id="beIN SPORTS 2">beIN SPORTS 2 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="8AEA2426-D451-4BA5-BF48-114A1F04B1A8" xmltv_id="beIN SPORTS 3">beIN SPORTS 3 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="DB9361E8-B3EB-4D6F-9A82-75B5F09E2F92" xmltv_id="beIN SPORTS 4">beIN SPORTS 4 Ar</channel>
@@ -128,6 +124,6 @@
     <channel update="i" site="beinsports.com.mena_ar" site_id="E24D9C11-A8B4-4C7F-AD3E-B3364FB6D5A2" xmltv_id="beIN SPORTS 6">beIN SPORTS 6 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="A892063B-A5D9-4199-95AC-6A214515FA6B" xmltv_id="beIN SPORTS 7">beIN SPORTS 7 Ar</channel>
     <channel update="i" site="beinsports.com.mena_ar" site_id="0F8D20A4-D46C-4B18-9242-8E7B3E978FF8" xmltv_id="beIN SPORTS 8">beIN SPORTS 8 Ar</channel>
-    <channel update="i" site="beinsports.com.mena_ar" site_id="5C08D9D3-C713-4F1F-947E-87C761428B9B" xmltv_id="beIN SPORTS 9">beIN SPORTS 9 Ar</channel> -->
+    <channel update="i" site="beinsports.com.mena_ar" site_id="5C08D9D3-C713-4F1F-947E-87C761428B9B" xmltv_id="beIN SPORTS 9">beIN SPORTS 9 Ar</channel>
 
 </settings>
