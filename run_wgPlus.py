@@ -100,27 +100,6 @@ os.system('mv WebGrab++.config.xml WebGrab++.config_old.xml')
 print('done.')
 print('')
 
-if not skip_credentials:
-    print(r'update credentials skiped')
-else:
-    print(r'update credentials on "WebGrab++.config.xml"')
-
-    # read file
-    with open('WebGrab++.config.xml', 'r') as file:
-      data = file.read()
-
-    # update credentials
-    data = re.sub(r'wg-username="[^"]+"', 'wg-username="{}"'.format(wg_username), data)
-    data = re.sub(r'password="[^"]+"', 'password="{}"'.format(wg_password), data)
-    data = re.sub(r'registered-email="[^"]+"', 'registered-email="{}"'.format(wg_email), data)
-
-    # write
-    with open('WebGrab++.config.xml', 'w') as file:
-      file.write(data)
-    print(data)
-
-exit()
-
 os.chdir(runner_dir)
 
 if 1!=1:
@@ -130,6 +109,27 @@ if 1!=1:
     os.system('git reset --hard origin/master')
     print('done.')
     print('')
+
+if not skip_credentials:
+    print(r'update credentials skiped')
+else:
+    print(r'update credentials on "WebGrab++.config.xml"')
+
+    # read file
+    with open('config_wgPlus_files/WebGrab++.config.xml', 'r') as file:
+      data = file.read()
+
+    # update credentials
+    data = re.sub(r'wg-username="[^"]+"', 'wg-username="{}"'.format(wg_username), data)
+    data = re.sub(r'password="[^"]+"', 'password="{}"'.format(wg_password), data)
+    data = re.sub(r'registered-email="[^"]+"', 'registered-email="{}"'.format(wg_email), data)
+
+    # write
+    with open('cred-WebGrab++.config.xml', 'w') as file:
+      file.write(data)
+    print(data)
+
+exit()
 
 print(r'copying "WebGrab++.config.xml" file to WebGrab++ directory ...')
 os.system(r'cp config_wgPlus_files/WebGrab++.config.xml ' + wg_dir)
